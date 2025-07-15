@@ -13,7 +13,7 @@ const criar = async (req, res) => {
     const imagem = req.file.filename;
     const {produto, valor} = req.body
     try{
-        await Product.create({produto: produto, valor: valor, imagem: `/imagens/${imagem}`});
+        await Product.create({produto: produto, valor: valor, imagem: `/api/imagens/${imagem}`});
         const produtoCriado = await Product.findOne({where: {produto: produto}})
         res.status(200).json({result: produtoCriado})
     } catch(error){

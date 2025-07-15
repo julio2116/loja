@@ -10,7 +10,7 @@ const Rotas = () => {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Layout />}>
-            <Route path="/" element={<HomePage />} />
+            <Route index element={<HomePage />} />
             <Route path="/produtos" element={<AllProducts />} />
             <Route path="/novoproduto" element={<CreateItem />} />
           </Route>

@@ -6,11 +6,11 @@ import user from "../assets/imagens/user.svg";
 const Header = () => {
   return (
     <>
-      <header style={{position: 'relative', paddingTop: '26px'}}>
-        <img style={{position: 'absolute', top: '31px', left: '50%', transform: 'translate(-50%)'}} src={icone} alt="" />
-        <div style={{display: 'flex', justifyContent: 'space-between'}}>
+      <header className="relative pt-[26px]">
+        <img className="absolute top-[65%] left-[50%] translate-[-50%]" src={icone} alt="" />
+        <div className="flex justify-between">
           <img src={menu} alt="" />
-          <div style={{display: 'flex', gap: '5px'}}>
+          <div className="flex gap-[5px]">
             <img src={cart} alt="" />
             <img src={user} alt="" />
           </div>

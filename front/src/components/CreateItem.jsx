@@ -15,13 +15,13 @@ const CreateItem = () => {
 
     return(
         <>
-            <form onSubmit={(e)=>handleSubmit(e)} style={{width: "150px", margin: "auto", display: "flex", flexDirection: "column", gap: "10px"}}>
-                <label htmlFor="imagem" style={{backgroundColor: "gray", color: "white", padding: "5px 15px", borderRadius: "10px", width: "100%", display: "block"}}>Imagem</label>
+            <form onSubmit={(e)=>handleSubmit(e)} className="w-[150px] m-auto flex flex-col gap-[10px]">
+                <label htmlFor="imagem" className="bg-[gray] text-[white] p-[5px 15px] rounded-[10px] w-[100%] block">Imagem</label>
                 <input type="file" name="imagem" id="imagem" hidden/>
                 <label htmlFor="produto">Produto</label>
-                <input style={{width: "100%"}} type="text" name="produto" id="produto" />
+                <input className="w-[100%]" type="text" name="produto" id="produto" />
                 <label htmlFor="valor">Valor</label>
-                <input style={{width: "100%"}} type="text" name="valor" id="valor" />
+                <input className="w-[100%]" type="text" name="valor" id="valor" />
                 <button>Enviar</button>
             </form>
         </>

@@ -20,11 +20,10 @@ const Users = sequelize.define(
       unique: true,
       validate: {
         isEmail: true,
-
       }
     },
     nome: {
-      type: DataTypes.FLOAT(7,2),
+      type: DataTypes.STRING,
       allowNull: false,
     },
     sobrenome: {

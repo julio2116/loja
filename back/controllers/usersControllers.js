@@ -43,8 +43,8 @@ const criar = async (req, res) => {
 };
 
 const alterar = async (req, res) => {
-    const { id } = req.params;
-    const { email, nome, sobrenome, nascimento, senha, papel } = req.body;
+    const { id } = req.usuario;
+    const { nome, sobrenome, nascimento, senha } = req.body;
     try {
         const user = await Users.findOne({ where: { id } });
         if (!user) {
@@ -52,15 +52,14 @@ const alterar = async (req, res) => {
         }
         await Users.update(
             {
-                email: email,
                 nome: nome,
                 sobrenome: sobrenome,
                 nascimento: nascimento,
                 senha: senha,
-                papel: papel,
             },
             { where: { id } }
         );
+        res.status(200).json({status: "Dados atualizados com sucesso!"})
     } catch (error) {
         res.status(500).json({ error: error.message });
     }

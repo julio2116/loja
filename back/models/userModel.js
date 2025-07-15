@@ -5,8 +5,8 @@ const bcrypt = require('bcrypt');
 const validarIdade = (nascimento) => {
     const maiorIdadeMS = 18 * 365.25 * 24 * 60 * 60 * 1000;
     const dataHoje = Date.now();
-    const dataNascimentoMS = Date(nascimento);
-    if(dataHoje - dataNascimentoMS > maiorIdadeMS){
+    const dataNascimentoMS = Date.parse(nascimento);
+    if(dataHoje - dataNascimentoMS < maiorIdadeMS){
         throw new Error('Usuário precisar ter mais de 18 anos!')
     }
 }

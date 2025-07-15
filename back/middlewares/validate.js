@@ -1,4 +1,5 @@
 const jwt = require('jsonwebtoken');
+require('dotenv').config();
 
 const verify = async (req, res, next) => {
     const token = req.header('Authorization')?.split(' ')[1];
@@ -6,7 +7,7 @@ const verify = async (req, res, next) => {
         throw new Error('Usuário não está logado!');
     }
     try{
-        const valid = jwt.verify(token, 'secret');
+        const valid = jwt.verify(token, process.env.SECRET);
         if(!valid){
             throw new Error('Token inválido!');
         }

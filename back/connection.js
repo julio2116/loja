@@ -1,9 +1,10 @@
 const { Sequelize } = require('sequelize');
+require('dotenv').config();
 
-const sequelize = new Sequelize('dc_store', 'root', '1234', {
-  host: 'localhost',
+const sequelize = new Sequelize(process.env.BANCO, process.env.USER, process.env.BANCO_PASSWORD, {
+  host: process.env.HOST,
   dialect:  'mysql',
-  port: 3306
+  port: process.env.BANCO_PORT
 });
 
 

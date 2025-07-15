@@ -1,6 +1,7 @@
 const Users = require("../models/userModel");
 const bcrypt = require("bcrypt");
-const jwt = require('jsonwebtoken')
+const jwt = require('jsonwebtoken');
+require('dotenv').config();
 
 const obterTodos = async (req, res) => {
     try {
@@ -78,7 +79,7 @@ const login = async (req, res) => {
         }
         const token = jwt.sign(
             { id: user.id, nome: user.nome, papel: user.papel },
-            "secret",
+            process.env.SECRET,
             { expiresIn: "1h" }
         );
         res.status(200).json({ token: token });

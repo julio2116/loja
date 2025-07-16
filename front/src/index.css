@@ -1,5 +1,21 @@
 @import "tailwindcss";
 
+@layer base {
+  body {
+    font-family: 'Beatrice Deck Trial', sans-serif;
+    letter-spacing: 2px;
+  }
+}
+
+.scroll-hidden {
+  overflow: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scroll-hidden::-webkit-scrollbar {
+  display: none;
+}
 
 @font-face {
   font-family: 'Beatrice Deck Trial';

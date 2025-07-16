@@ -1,0 +1,126 @@
+@font-face {
+    font-family: 'Beatrice Deck Trial';
+    src: url('BeatriceDeckTrial-Bold.woff2') format('woff2'),
+        url('BeatriceDeckTrial-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Beatrice Deck Trial';
+    src: url('BeatriceDeckTrial-BoldItalic.woff2') format('woff2'),
+        url('BeatriceDeckTrial-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Beatrice Deck Trial';
+    src: url('BeatriceDeckTrial-Medium.woff2') format('woff2'),
+        url('BeatriceDeckTrial-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Beatrice Deck Trial';
+    src: url('BeatriceDeckTrial-Semibold.woff2') format('woff2'),
+        url('BeatriceDeckTrial-Semibold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Beatrice Deck Trial';
+    src: url('BeatriceDeckTrial-MediumItalic.woff2') format('woff2'),
+        url('BeatriceDeckTrial-MediumItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Beatrice Deck Trial';
+    src: url('BeatriceDeckTrial-ExtraboldItalic.woff2') format('woff2'),
+        url('BeatriceDeckTrial-ExtraboldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Beatrice Deck Trial';
+    src: url('BeatriceDeckTrial-SemiboldItalic.woff2') format('woff2'),
+        url('BeatriceDeckTrial-SemiboldItalic.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Beatrice Deck Trial';
+    src: url('BeatriceDeckTrial-RegularItalic.woff2') format('woff2'),
+        url('BeatriceDeckTrial-RegularItalic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Beatrice Deck Trial';
+    src: url('BeatriceDeckTrial-LightItalic.woff2') format('woff2'),
+        url('BeatriceDeckTrial-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Beatrice Deck Trial';
+    src: url('BeatriceDeckTrial-Extrabold.woff2') format('woff2'),
+        url('BeatriceDeckTrial-Extrabold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Beatrice Deck Trial';
+    src: url('BeatriceDeckTrial-Regular.woff2') format('woff2'),
+        url('BeatriceDeckTrial-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Beatrice Deck Trial';
+    src: url('BeatriceDeckTrial-Light.woff2') format('woff2'),
+        url('BeatriceDeckTrial-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Beatrice Deck Trial';
+    src: url('BeatriceDeckTrial-ThinItalic.woff2') format('woff2'),
+        url('BeatriceDeckTrial-ThinItalic.woff') format('woff');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Beatrice Deck Trial';
+    src: url('BeatriceDeckTrial-Thin.woff2') format('woff2'),
+        url('BeatriceDeckTrial-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+

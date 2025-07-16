@@ -1,9 +1,9 @@
-import Header from "../components/Header";
+import Options from "../components/Options";
 
 const HomePage = () => {
   return (
     <>
-        teste
+        <Options />
     </>
   );
 };

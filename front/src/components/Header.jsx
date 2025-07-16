@@ -1,7 +1,7 @@
-import menu from "../assets/imagens/menu.svg";
-import icone from "../assets/imagens/icone.svg";
-import cart from "../assets/imagens/cart.svg";
-import user from "../assets/imagens/user.svg";
+import menu from "../public/imagens/menu.svg";
+import icone from "../public/imagens//icone.svg";
+import cart from "../public/imagens//cart.svg";
+import user from "../public/imagens//user.svg";
 
 const Header = () => {
   return (

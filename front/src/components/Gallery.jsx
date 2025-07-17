@@ -6,8 +6,8 @@ const Gallery = () => {
   return (
     <>
       <div className="flex gap-[8px] overflow-auto scroll-hidden">
-        {[f1, f2, f1, f2].map(item=>(
-            <Card img={item}/>
+        {[f1, f2, f1, f2].map((item, index)=>(
+            <Card key={index} img={item}/>
         ))}
       </div>
     </>

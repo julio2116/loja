@@ -1,16 +1,16 @@
-import setaDireita from "../public/imagens/seta-direita.svg";
 import Gallery from "./Gallery";
-import {formatText} from "../utils/formatLetterFunctions"
+import { formatText } from "../utils/formatLetterFunctions";
 // A chave subtitle espera receber um objeto no formato: subtitle={{title: "", width: ""}}
 // A chave title espera receber um objeto no formato: subtitle={{title: "", uppercase: boolean}}
 
-const Collection = ({ title, subtitle, callToAction }) => {
-    [title, subtitle, callToAction].filter(item=>item?.letterCase).forEach(element => {
-      if (element) {
-          const { text, letterCase } = element;
-          element.text = formatText(text, letterCase);
-      }
-    });
+const Collection = (props) => {
+    let { title, subtitle, callToAction, button } = props;
+    Object.values(props)
+        .filter((item) => item?.text && item.letterCase)
+        .forEach((element) => {
+            const { text, letterCase } = element;
+            element.text = formatText(text, letterCase);
+        });
     return (
         <>
             <div className="my-[45px]">
@@ -44,10 +44,12 @@ const Collection = ({ title, subtitle, callToAction }) => {
                 </div>
             )}
             <Gallery />
-            <button className="flex gap-[17px] text-[12px] tracking-normal bg-[#D9D9D9] py-[7px] px-[17px] my-[21px]">
-                Go To Shop
-                <img src={setaDireita} alt="" />
-            </button>
+            {button && (
+                <button className="flex gap-[17px] text-[12px] tracking-normal bg-[#D9D9D9] py-[7px] px-[17px] my-[21px]">
+                    {button?.text}
+                    {button?.img && <img src={button.img} alt="" />}
+                </button>
+            )}
         </>
     );
 };

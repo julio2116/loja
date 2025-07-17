@@ -1,7 +1,7 @@
 import Gallery from "./Gallery";
 import { formatText } from "../utils/formatLetterFunctions";
-// A chave subtitle espera receber um objeto no formato: subtitle={{title: "", width: ""}}
-// A chave title espera receber um objeto no formato: subtitle={{title: "", uppercase: boolean}}
+// As chaves deste componente esperam receber um objeto no formato: subtitle={{title: "", width: ""}}
+//subchaves validas: text, img, lettercase, width
 
 const Collection = (props) => {
     let { title, subtitle, callToAction, button } = props;

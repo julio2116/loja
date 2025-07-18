@@ -3,14 +3,16 @@ import Header from "./Header";
 import Footer from "./Footer";
 
 const Layout = () => {
-  return (
-    <>
-      <div className="px-[17px] bg-[#A3A3A325]">
-        <Header />
-        <Outlet />
-        <Footer />
-      </div>
-    </>
-  );
+    return (
+        <>
+            <div className="bg-[#A3A3A325] px-[17px]">
+                <Header />
+                <Outlet />
+            </div>
+            <div className="bg-[#A3A3A335] px-[17px]">
+                <Footer />
+            </div>
+        </>
+    );
 };
 export default Layout;

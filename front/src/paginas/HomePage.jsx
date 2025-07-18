@@ -4,6 +4,7 @@ import SearchBox from "../components/SearchBox";
 import seta from "../public/imagens/seta.svg";
 import setaDireita from "../public/imagens/seta-direita.svg";
 import Filter from "../components/Filter";
+import VisualIdentityBlock from "../components/VisualIdentityBlock";
 
 const HomePage = () => {
     return (
@@ -42,6 +43,7 @@ const HomePage = () => {
             >
                 <Filter />
             </Collection>
+            <VisualIdentityBlock />
         </>
     );
 };

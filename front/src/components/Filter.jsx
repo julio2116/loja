@@ -1,16 +1,16 @@
 const Filter = () => {
     return (
         <>
-            <div className="flex gap-[80px] text-[12px] leading-[15px] text-[#00000066]">
-                <ul className="flex flex-col gap-[5px] self-end">
+            <div className="flex gap-[80px] text-[12px] lg:text-[18px] leading-[15px] text-[#00000066] w-full lg:justify-between">
+                <ul className="flex flex-col gap-[5px] self-end lg:flex-row lg:gap-[45px]">
                     <li className="text-[#000000]">(all)</li>
                     <li>Men</li>
                     <li>Womem</li>
                     <li>KID</li>
                 </ul>
-                <div className="flex justify-between w-full">
+                <div className="flex lg:w-fit lg:gap-[120px] justify-between w-full">
                     <div className="text-[#000000]">Filters(+)</div>
-                    <div className="flex flex-col">
+                    <div className="flex flex-col lg:min-w-fit">
                         <div className="text-[#000000]">Sorts(-)</div>
                         <span className="my-[5px]">Less to more</span>
                         <span className="my-[5px]">More to less</span>

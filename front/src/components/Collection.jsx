@@ -2,74 +2,103 @@ import CallToAction from "./CallToAction";
 import Gallery from "./Gallery";
 import { Link } from "react-router";
 import { formatText } from "../utils/formatText";
+import { useMediaQuery } from "usehooks-ts";
+import NextItems from "./NextItems";
 // As chaves deste componente esperam receber um objeto no formato: subtitle={{title: "", width: ""}}
 //subchaves validas: text, img, lettercase, width
 
 const Collection = ({
-    title,
-    subtitle,
-    callToAction,
-    button,
-    link,
-    countItems,
-    splitTitle,
-    childrenbefore,
-    children,
+  title,
+  subtitle,
+  callToAction,
+  button,
+  link,
+  countItems,
+  splitTitle,
+  childrenbefore,
+  children,
+  inline = false,
+  cardDetails,
+  align,
 }) => {
-    const newTitle = formatText(title.text, splitTitle);
+  const desktop = useMediaQuery("(min-width: 1024px)");
+  const newTitle = formatText(title.text, splitTitle);
 
-    return (
-        <>
-            <div className="relative w-fit">
-                <h1
-                    className={`${
-                        title?.letterCase || ""
-                    } font-semibold text-[45px] leading-[40px] mb-[10px] mt-[45px]`}
+  return (
+    <>
+      <div
+        className={`${
+          inline && desktop && "flex"
+        } lg:mt-[45px] lg:mb-[10px] lg:justify-between`}
+      >
+        <div className="relative w-fit lg:w-[35%] lg:flex lg:flex-col justify-between ">
+          <div>
+            <h1
+              className={`${
+                title?.letterCase || ""
+              } font-semibold text-[45px] lg:text-[60px] lg:leading-[52px] leading-[40px] mb-[10px] mt-[45px] lg:mt-[0] lg:mb-[0]`}
+            >
+              {newTitle.map((item, index) => {
+                return <div key={index}>{item}</div>;
+              })}
+            </h1>
+            {countItems && (
+              <span className="text-[#000E8A] font-extrabold absolute top-[25%] left-[100%] lg:left-[77%]">
+                (50)
+              </span>
+            )}
+            {subtitle && (
+              <>
+                <div
+                  style={{ width: `${subtitle.width}` }}
+                  className={`${subtitle.letterCase} text-[16px]`}
                 >
-                    {newTitle.map((item, index) => {
-                        return <div key={index}>{item}</div>;
-                    })}
-                </h1>
-                {countItems && (
-                    <span className="text-[#000E8A] font-extrabold absolute top-[25%] left-[100%]">
-                        (50)
-                    </span>
-                )}
-                {subtitle && (
-                    <>
-                        <div
-                            style={{ width: `${subtitle.width}` }}
-                            className={`${subtitle.letterCase} text-[16px]`}
-                        >
-                            {subtitle.text}
-                        </div>
-                    </>
-                )}
-                {childrenbefore &&  children }
-            </div>
-            {callToAction && (
-                <div className="block w-fit justify-self-end">
-                    {link?.isLink ? (
-                        <Link to={link.link}>
-                            <CallToAction {...callToAction} />
-                        </Link>
-                    ) : (
-                        <CallToAction {...callToAction} />
-                    )}
+                  {subtitle.text}
                 </div>
+              </>
             )}
-            <Gallery />
-            {!childrenbefore &&  children }
-            {button && (
-                <button
-                    className={`${button.letterCase} flex gap-[17px] text-[12px] tracking-normal bg-[#D9D9D9] py-[7px] px-[17px] my-[21px]`}
-                >
-                    {button?.text}
-                    {button?.img && <img src={button.img} alt="" />}
-                </button>
+          </div>
+          {button && desktop && (
+            <div className="flex justify-between">
+              <button
+                className={`${button.letterCase} flex gap-[17px] lg:gap-[35px] text-[12px] lg:text-[15px] tracking-normal bg-[#D9D9D9] py-[7px] px-[17px] my-[21px] lg:my-[0] w-fit`}
+              >
+                {button?.text}
+                {button?.img && (
+                  <img className="lg:w-[30px]" src={button.img} alt="" />
+                )}
+              </button>
+              <NextItems />
+            </div>
+          )}
+        </div>
+        {childrenbefore && children}
+        {callToAction && !desktop && (
+          <div className="block w-fit justify-self-end">
+            {link?.isLink ? (
+              <Link to={link.link}>
+                <CallToAction {...callToAction} />
+              </Link>
+            ) : (
+              <CallToAction {...callToAction} />
             )}
-        </>
-    );
+          </div>
+        )}
+        <Gallery details={cardDetails} inline={inline} />
+        {!childrenbefore && children}
+        {!button && desktop && <NextItems align={align} />}
+
+        {button && !desktop && (
+          <button
+            className={`${button.letterCase} flex gap-[17px] text-[12px] tracking-normal bg-[#D9D9D9] py-[7px] px-[17px] my-[21px]`}
+          >
+            {button?.text}
+            {button?.img && <img src={button.img} alt="" />}
+          </button>
+        )}
+      </div>
+    </>
+  );
 };
 
 export default Collection;

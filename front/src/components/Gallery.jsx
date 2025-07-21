@@ -1,13 +1,18 @@
 import f1 from "../public/imagens-temp/f1.svg";
 import f2 from "../public/imagens-temp/f2.svg";
 import Card from "./Card";
+import { useMediaQuery } from "usehooks-ts";
 
-const Gallery = () => {
+const Gallery = ({details, inline}) => {
+  const desktop = useMediaQuery("(min-width: 1024px)");
+  const desktopClasses = "flex gap-[30px]";
+  const mobileClasses = "flex gap-[8px] overflow-auto scroll-hidden"
+  const myClasses = desktop ? desktopClasses : mobileClasses
   return (
     <>
-      <div className="flex gap-[8px] overflow-auto scroll-hidden">
-        {[f1, f2, f1, f2].map((item, index)=>(
-            <Card key={index} img={item}/>
+      <div className={myClasses}>
+        {[f1, f2, f1, f2].map((item, index) => (
+          <Card key={index} img={item} details={details} inline={inline}/>
         ))}
       </div>
     </>

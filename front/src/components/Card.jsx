@@ -1,7 +1,7 @@
 const Card = ({img, details, inline}) => {
   return (
     <>
-      <div className={`tracking-normal min-w-[45%] ${inline ? "lg:min-w-[48.7%]" : "lg:min-w-[32%]"}`}>
+      <div className={`tracking-normal min-w-[45%] ${inline ? "lg:min-w-[48%]" : "lg:min-w-[31.76%]"}`}>
         <img className="w-[100%]" src={img} alt="" />
         {details &&
         <>

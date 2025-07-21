@@ -5,7 +5,7 @@ import { useMediaQuery } from "usehooks-ts";
 
 const Gallery = ({details, inline}) => {
   const desktop = useMediaQuery("(min-width: 1024px)");
-  const desktopClasses = "flex gap-[30px]";
+  const desktopClasses = "flex gap-[30px] lg:min-w-[64%] overflow-hidden";
   const mobileClasses = "flex gap-[8px] overflow-auto scroll-hidden"
   const myClasses = desktop ? desktopClasses : mobileClasses
   return (

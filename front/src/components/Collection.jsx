@@ -32,7 +32,7 @@ const Collection = ({
         } lg:mt-[45px] lg:mb-[10px] lg:justify-between`}
       >
         <div className="relative w-fit lg:w-[35%] lg:flex lg:flex-col justify-between ">
-          <div>
+          <div className={`${!inline && desktop && "lg:mb-[30px]"}`}>
             <h1
               className={`${
                 title?.letterCase || ""
@@ -74,7 +74,7 @@ const Collection = ({
         </div>
         {childrenbefore && children}
         {callToAction && !desktop && (
-          <div className="block w-fit justify-self-end">
+          <div className="block w-fit justify-self-end mb-[10px]">
             {link?.isLink ? (
               <Link to={link.link}>
                 <CallToAction {...callToAction} />

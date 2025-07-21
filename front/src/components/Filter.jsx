@@ -17,7 +17,7 @@ const Filter = () => {
                     </div>
                 </div>
             </div>
-            <hr className="mb-[15px] mt-[7px] border-[#00000010]" />
+            <hr className="mb-[15px] mt-[7px] border-[#00000010] lg:mb-[30px] lg:mt-[14px]" />
         </>
     );
 };

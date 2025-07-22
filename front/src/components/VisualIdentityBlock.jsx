@@ -18,11 +18,11 @@ const VisualIdentityBlock = () => {
                         ensuring the highest quelity exqulsite finish
                     </p>
                 </div>
-                <div className="flex flex-wrap gap-[20px] justify-center lg:py-[60px]">
-                    <img className={`${desktop ? "w-[23.8%] relative bottom-[25px]" : "w-[40%]"}`} src={r1} alt="" />
-                    <img className={`${desktop ? "w-[23.8%] relative top-[25px]" : "w-[40%]"}`} src={r2} alt="" />
-                    <img className={`${desktop ? "w-[23.8%] relative bottom-[25px]" : "w-[40%]"}`} src={r1} alt="" />
-                    <img className={`${desktop ? "w-[23.8%] relative top-[25px]" : "w-[40%]"}`} src={r2} alt="" />
+                <div className="flex flex-wrap gap-[30px] lg:gap-[4%] justify-center lg:py-[60px]">
+                    <img className={`${desktop ? "w-[22%] relative bottom-[25px]" : "w-[40%]"}`} src={r1} alt="" />
+                    <img className={`${desktop ? "w-[22%] relative top-[25px]" : "w-[40%]"}`} src={r2} alt="" />
+                    <img className={`${desktop ? "w-[22%] relative bottom-[25px]" : "w-[40%]"}`} src={r1} alt="" />
+                    <img className={`${desktop ? "w-[22%] relative top-[25px]" : "w-[40%]"}`} src={r2} alt="" />
                 </div>
             </div>
         </>

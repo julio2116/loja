@@ -3,17 +3,29 @@ import f2 from "../public/imagens-temp/f2.svg";
 import Card from "./Card";
 import { useMediaQuery } from "usehooks-ts";
 
-const Gallery = ({details, inline}) => {
+const Gallery = ({ details, inline, click, onLimit }) => {
+  const gallery = document.querySelector("#gallery");
+  const gallerySize = gallery?.offsetWidth;
+  const desloc = click * gallerySize;
+  onLimit({max: gallery?.children?.length / 2 || 0, min: Math.abs(desloc) / gallerySize || 0});
+
   const desktop = useMediaQuery("(min-width: 1024px)");
-  const desktopClasses = "flex gap-[30px] lg:min-w-[64%] overflow-hidden";
-  const mobileClasses = "flex gap-[8px] overflow-auto scroll-hidden"
-  const myClasses = desktop ? desktopClasses : mobileClasses
+  const desktopClasses = "flex gap-[2.8%] transition-transform duration-500 ease-in-out transform";
+  const mobileClasses = "flex gap-[8px] overflow-auto scroll-hidden";
+  const myClasses = desktop ? desktopClasses : mobileClasses;
+
   return (
     <>
-      <div className={myClasses}>
-        {[f1, f2, f1, f2].map((item, index) => (
-          <Card key={index} img={item} details={details} inline={inline}/>
-        ))}
+      <div className="lg:min-w-[64%] overflow-hidden">
+        <div
+          className={myClasses}
+          id="gallery"
+          style={{ transform: `translateX(${desloc}px)` }}
+        >
+          {[f1, f2, f1, f2, f1, f2, f1, f2].map((item, index) => (
+            <Card key={index} img={item} details={details} inline={inline} />
+          ))}
+        </div>
       </div>
     </>
   );

@@ -4,6 +4,7 @@ import { Link } from "react-router";
 import { formatText } from "../utils/formatText";
 import { useMediaQuery } from "usehooks-ts";
 import NextItems from "./NextItems";
+import { useState } from "react";
 // As chaves deste componente esperam receber um objeto no formato: subtitle={{title: "", width: ""}}
 //subchaves validas: text, img, lettercase, width
 
@@ -23,27 +24,29 @@ const Collection = ({
 }) => {
   const desktop = useMediaQuery("(min-width: 1024px)");
   const newTitle = formatText(title.text, splitTitle);
+  const [click, setClick] = useState(0);
+  const [limit, setLimit] = useState(1);
 
   return (
     <>
       <div
         className={`${
-          inline && desktop && "flex"
+          inline && desktop && "flex gap-[20px]"
         } lg:mt-[45px] lg:mb-[10px] lg:justify-between`}
       >
-        <div className="relative w-fit lg:w-[35%] lg:flex lg:flex-col justify-between ">
+        <div className="relative w-fit lg:flex lg:flex-col justify-between ">
           <div className={`${!inline && desktop && "lg:mb-[30px]"}`}>
             <h1
               className={`${
                 title?.letterCase || ""
-              } font-semibold text-[45px] lg:text-[60px] lg:leading-[52px] leading-[40px] mb-[10px] mt-[45px] lg:mt-[0] lg:mb-[0]`}
+              } font-semibold text-[2.5rem] lg:text-[3rem] xl:text-[4rem] lg:leading-[52px] leading-[40px] mb-[10px] mt-[45px] lg:mt-[0] lg:mb-[0]`}
             >
               {newTitle.map((item, index) => {
                 return <div key={index}>{item}</div>;
               })}
             </h1>
             {countItems && (
-              <span className="text-[#000E8A] font-extrabold absolute top-[25%] left-[100%] lg:left-[77%]">
+              <span className="text-[#000E8A] font-extrabold absolute top-[25%] left-[100%]">
                 (50)
               </span>
             )}
@@ -68,7 +71,7 @@ const Collection = ({
                   <img className="lg:w-[30px]" src={button.img} alt="" />
                 )}
               </button>
-              <NextItems />
+              <NextItems onClick={setClick} limit={limit}/>
             </div>
           )}
         </div>
@@ -84,9 +87,9 @@ const Collection = ({
             )}
           </div>
         )}
-        <Gallery details={cardDetails} inline={inline} />
+        <Gallery details={cardDetails} inline={inline} click={click} onLimit={setLimit}/>
         {!childrenbefore && children}
-        {!button && desktop && <NextItems align={align} />}
+        {!button && desktop && <NextItems align={align} onClick={setClick} click={click} limit={limit}/>}
 
         {button && !desktop && (
           <button

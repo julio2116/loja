@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router";
 import AllProducts from "../components/AllProducts";
-import CreateItem from "../components/createItem";
+import CreateItem from "../components/CreateItem";
 import HomePage from "../paginas/HomePage";
 import Layout from "../components/Layout";
 

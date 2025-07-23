@@ -1,10 +1,17 @@
+import { useState } from "react";
 import maior from "../public/imagens/maior.png";
 import menor from "../public/imagens/menor.png";
 
 const NextItems = ({align, onClick, click, limit}) => {
+  let b = click;
   function handleClick(n){
-    // if(click <= limit.min || click >= limit.max) return
-    onClick(prev=> prev += n)
+    b += n;
+    if(b < (-limit.max) || b > limit.min){
+      return
+    }
+
+    onClick(prev=>(prev += n));
+    b = click;
   }
   return (
     <>

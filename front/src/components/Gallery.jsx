@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import f1 from "../public/imagens-temp/f1.svg";
 import f2 from "../public/imagens-temp/f2.svg";
 import Card from "./Card";
@@ -7,7 +8,11 @@ const Gallery = ({ details, inline, click, onLimit }) => {
   const gallery = document.querySelector("#gallery");
   const gallerySize = gallery?.offsetWidth;
   const desloc = click * gallerySize;
-  onLimit({max: gallery?.children?.length / 2 || 0, min: Math.abs(desloc) / gallerySize || 0});
+  const array = [f1, f2, f1, f2, f1, f2, f1, f2]
+
+  useEffect(()=>{
+    onLimit({ max: array.length / 2, min: 1 });
+  },[onLimit, array.length])
 
   const desktop = useMediaQuery("(min-width: 1024px)");
   const desktopClasses = "flex gap-[2.8%] transition-transform duration-500 ease-in-out transform";
@@ -22,7 +27,7 @@ const Gallery = ({ details, inline, click, onLimit }) => {
           id="gallery"
           style={{ transform: `translateX(${desloc}px)` }}
         >
-          {[f1, f2, f1, f2, f1, f2, f1, f2].map((item, index) => (
+          {array.map((item, index) => (
             <Card key={index} img={item} details={details} inline={inline} />
           ))}
         </div>

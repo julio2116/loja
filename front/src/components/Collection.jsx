@@ -25,7 +25,7 @@ const Collection = ({
   const desktop = useMediaQuery("(min-width: 1024px)");
   const newTitle = formatText(title.text, splitTitle);
   const [click, setClick] = useState(0);
-  const [limit, setLimit] = useState(1);
+  const [limit, setLimit] = useState({min: 1, max: 1});
 
   return (
     <>
@@ -71,7 +71,7 @@ const Collection = ({
                   <img className="lg:w-[30px]" src={button.img} alt="" />
                 )}
               </button>
-              <NextItems onClick={setClick} limit={limit}/>
+              <NextItems onClick={setClick} limit={limit} click={click}/>
             </div>
           )}
         </div>

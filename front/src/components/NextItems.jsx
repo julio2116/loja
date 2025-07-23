@@ -1,6 +1,6 @@
 import { useEffect } from "react";
-import menor from "../public/imagens/maior.png";
-import maior from "../public/imagens/menor.png";
+import menor from "../assets/imagens/maior.png";
+import maior from "../assets/imagens/menor.png";
 
 const NextItems = ({ align, onClick, click, limit, id }) => {
     useEffect(() => {

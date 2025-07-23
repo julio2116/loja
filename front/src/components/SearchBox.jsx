@@ -1,4 +1,4 @@
-import lupa from "../public/imagens/lupa.svg";
+import lupa from "../assets/imagens/lupa.svg";
 
 const SearchBox = () => {
     return (

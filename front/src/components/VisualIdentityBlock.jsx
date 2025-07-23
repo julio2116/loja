@@ -1,5 +1,5 @@
-import r1 from "../public/fashion-imagens/r1.svg";
-import r2 from "../public/fashion-imagens/r2.svg";
+import r1 from "../assets/fashion-imagens/r1.svg";
+import r2 from "../assets/fashion-imagens/r2.svg";
 import { useMediaQuery } from "usehooks-ts";
 
 const VisualIdentityBlock = () => {

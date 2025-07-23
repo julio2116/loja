@@ -1,6 +1,6 @@
 import { useEffect } from "react";
-import f1 from "../public/imagens-temp/f1.svg";
-import f2 from "../public/imagens-temp/f2.svg";
+import f1 from "../assets/imagens-temp/f1.svg";
+import f2 from "../assets/imagens-temp/f2.svg";
 import Card from "./Card";
 import { useMediaQuery } from "usehooks-ts";
 

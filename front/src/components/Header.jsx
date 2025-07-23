@@ -1,8 +1,8 @@
-import menu from "../public/imagens/menu.svg";
-import icone from "../public/imagens/icone.svg";
-import cart from "../public/imagens/cart.svg";
-import user from "../public/imagens/user.svg";
-import favorites from "../public/imagens/favorites.svg";
+import menu from "../assets/imagens/menu.svg";
+import icone from "../assets/imagens/icone.svg";
+import cart from "../assets/imagens/cart.svg";
+import user from "../assets/imagens/user.svg";
+import favorites from "../assets/imagens/favorites.svg";
 import { useMediaQuery } from "usehooks-ts";
 import MenuHeader from "./MenuHeader";
 

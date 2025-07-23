@@ -1,8 +1,8 @@
 import Collection from "../components/Collection";
 import Options from "../components/Options";
 import SearchBox from "../components/SearchBox";
-import seta from "../public/imagens/seta.svg";
-import setaDireita from "../public/imagens/seta-direita.svg";
+import seta from "../assets/imagens/seta.svg";
+import setaDireita from "../assets/imagens/seta-direita.svg";
 import Filter from "../components/Filter";
 import VisualIdentityBlock from "../components/VisualIdentityBlock";
 

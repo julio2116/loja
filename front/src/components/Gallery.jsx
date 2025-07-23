@@ -9,7 +9,7 @@ const Gallery = ({ details, inline, click, onLimit, id }) => {
   const gallerySize = gallery?.offsetWidth;
   console.log(gallerySize)
   const desloc = click * gallerySize;
-  const array = [f1, f2, f1, f2, f1, f2, f1, f2, f1, f2]
+  const array = [f1, f2, f1, f2, f1, f2, f1, f2]
 
   useEffect(()=>{
     onLimit({ max: array.length / Number.parseInt((inline ? 2 : 3)), min: 1 });

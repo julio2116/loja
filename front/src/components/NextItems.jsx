@@ -13,8 +13,7 @@ const NextItems = ({ align, onClick, click, limit, id }) => {
         b += n;
         const buttonPrev = document.querySelector(`#prev-${id}`);
         const buttonNext = document.querySelector(`#next-${id}`);
-        console.log(b);
-        console.log(-limit.max);
+        
         if (b <= -limit.max) {
             buttonNext.setAttribute("disabled", "true");
             return;

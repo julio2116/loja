@@ -4,9 +4,10 @@ import f2 from "../public/imagens-temp/f2.svg";
 import Card from "./Card";
 import { useMediaQuery } from "usehooks-ts";
 
-const Gallery = ({ details, inline, click, onLimit }) => {
-  const gallery = document.querySelector("#gallery");
+const Gallery = ({ details, inline, click, onLimit, id }) => {
+  const gallery = document.querySelector(`#gallery-${id}`);
   const gallerySize = gallery?.offsetWidth;
+  console.log(gallerySize)
   const desloc = click * gallerySize;
   const array = [f1, f2, f1, f2, f1, f2, f1, f2]
 
@@ -15,7 +16,7 @@ const Gallery = ({ details, inline, click, onLimit }) => {
   },[onLimit, array.length])
 
   const desktop = useMediaQuery("(min-width: 1024px)");
-  const desktopClasses = "flex gap-[2.8%] transition-transform duration-500 ease-in-out transform";
+  const desktopClasses = "flex justify-around transition-transform duration-500 ease-in-out transform";
   const mobileClasses = "flex gap-[8px] overflow-auto scroll-hidden";
   const myClasses = desktop ? desktopClasses : mobileClasses;
 
@@ -24,7 +25,7 @@ const Gallery = ({ details, inline, click, onLimit }) => {
       <div className="lg:min-w-[64%] overflow-hidden">
         <div
           className={myClasses}
-          id="gallery"
+          id={`gallery-${id}`}
           style={{ transform: `translateX(${desloc}px)` }}
         >
           {array.map((item, index) => (

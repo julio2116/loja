@@ -28,6 +28,7 @@ const HomePage = () => {
         }}
         splitTitle={"firstword"}
         inline={true}
+        id={1}
       />
       <Collection
         title={{ text: "new this week", letterCase: "uppercase" }}
@@ -37,6 +38,7 @@ const HomePage = () => {
         splitTitle={"firstword"}
         cardDetails={true}
         align={true}
+        id={2}
       />
       <Collection
         childrenbefore={true}
@@ -46,6 +48,7 @@ const HomePage = () => {
         }}
         splitTitle={"allwords"}
         align={true}
+        id={3}
       >
         <Filter />
       </Collection>

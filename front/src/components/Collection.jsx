@@ -21,6 +21,7 @@ const Collection = ({
   inline = false,
   cardDetails,
   align,
+  id
 }) => {
   const desktop = useMediaQuery("(min-width: 1024px)");
   const newTitle = formatText(title.text, splitTitle);
@@ -71,7 +72,7 @@ const Collection = ({
                   <img className="lg:w-[30px]" src={button.img} alt="" />
                 )}
               </button>
-              <NextItems onClick={setClick} limit={limit} click={click} id={1} />
+              <NextItems onClick={setClick} limit={limit} click={click} id={id} />
             </div>
           )}
         </div>
@@ -87,9 +88,9 @@ const Collection = ({
             )}
           </div>
         )}
-        <Gallery details={cardDetails} inline={inline} click={click} onLimit={setLimit}/>
+        <Gallery details={cardDetails} inline={inline} click={click} onLimit={setLimit} id={id}/>
         {!childrenbefore && children}
-        {!button && desktop && <NextItems align={align} onClick={setClick} click={click} limit={limit} id={2}/>}
+        {!button && desktop && <NextItems align={align} onClick={setClick} click={click} limit={limit} id={id}/>}
 
         {button && !desktop && (
           <button

@@ -1,19 +1,27 @@
-const Card = ({img, details, inline}) => {
-  return (
-    <>
-      <div className={`tracking-normal min-w-[45%] ${inline ? "lg:min-w-[47.15%]" : "lg:w-[30.66%]"}`}>
-        <img className="w-[100%]" src={img} alt="" />
-        {details &&
+const Card = ({ img, details, inline }) => {
+    return (
         <>
-        <span className="text-[10px] lg:text-[15px] text-[#00000066]">cotton T Shirt</span>
-        <div className="text-[12px] lg:text-[18px] font-semibold flex justify-between">
-          <span>Full Sleeve Zipper</span>
-          <span>$ 199</span>
-        </div>
+            <div
+                className={`tracking-normal min-w-[45%] ${
+                    inline ? "lg:min-w-[46%] mx-[2%]" : "lg:min-w-[30.33%] mx-[1.5%]"
+                }`}
+            >
+                <div>
+                    <img className="w-[100%]" src={img} alt="" />
+                </div>
+                {details && (
+                    <>
+                        <span className="text-[10px] lg:text-[15px] text-[#00000066]">
+                            cotton T Shirt
+                        </span>
+                        <div className="text-[12px] lg:text-[18px] font-semibold flex justify-between">
+                            <span>Full Sleeve Zipper</span>
+                            <span>$ 199</span>
+                        </div>
+                    </>
+                )}
+            </div>
         </>
-        }
-      </div>
-    </>
-  );
+    );
 };
-export default Card
+export default Card;

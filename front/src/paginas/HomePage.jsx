@@ -47,6 +47,7 @@ const HomePage = () => {
           letterCase: "uppercase",
         }}
         splitTitle={"allwords"}
+        cardDetails={true}
         align={true}
         id={3}
       >

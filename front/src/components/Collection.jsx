@@ -71,7 +71,7 @@ const Collection = ({
                   <img className="lg:w-[30px]" src={button.img} alt="" />
                 )}
               </button>
-              <NextItems onClick={setClick} limit={limit} click={click}/>
+              <NextItems onClick={setClick} limit={limit} click={click} id={1} />
             </div>
           )}
         </div>
@@ -89,7 +89,7 @@ const Collection = ({
         )}
         <Gallery details={cardDetails} inline={inline} click={click} onLimit={setLimit}/>
         {!childrenbefore && children}
-        {!button && desktop && <NextItems align={align} onClick={setClick} click={click} limit={limit}/>}
+        {!button && desktop && <NextItems align={align} onClick={setClick} click={click} limit={limit} id={2}/>}
 
         {button && !desktop && (
           <button

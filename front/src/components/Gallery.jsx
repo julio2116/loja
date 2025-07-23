@@ -12,11 +12,11 @@ const Gallery = ({ details, inline, click, onLimit, id }) => {
   const array = [f1, f2, f1, f2, f1, f2, f1, f2]
 
   useEffect(()=>{
-    onLimit({ max: array.length / 2, min: 1 });
+    onLimit({ max: array.length / Number.parseInt((inline ? 2 : 3)), min: 1 });
   },[onLimit, array.length])
 
   const desktop = useMediaQuery("(min-width: 1024px)");
-  const desktopClasses = "flex justify-around transition-transform duration-500 ease-in-out transform";
+  const desktopClasses = "flex transition-transform duration-500 ease-in-out transform";
   const mobileClasses = "flex gap-[8px] overflow-auto scroll-hidden";
   const myClasses = desktop ? desktopClasses : mobileClasses;
 

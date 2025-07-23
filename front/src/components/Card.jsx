@@ -3,7 +3,7 @@ const Card = ({ img, details, inline }) => {
         <>
             <div
                 className={`tracking-normal min-w-[45%] ${
-                    inline ? "lg:min-w-[46%] mx-[2%]" : "lg:min-w-[30.33%] mx-[1.5%]"
+                    inline ? "lg:min-w-[46%] lg:mx-[2%]" : "lg:min-w-[30.33%] lg:mx-[1.5%]"
                 }`}
             >
                 <div>

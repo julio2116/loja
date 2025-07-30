@@ -3,13 +3,13 @@ import icone from "../assets/imagens/icone.svg";
 import cart from "../assets/imagens/cart.svg";
 import user from "../assets/imagens/user.svg";
 import favorites from "../assets/imagens/favorites.svg";
-import { useMediaQuery } from "usehooks-ts";
 import MenuHeader from "./MenuHeader";
 import { Link } from "react-router";
 import AssideMenu from "./AssideMenu";
+import { useDevice } from "../contexts/DeviceContext";
 
 const Header = () => {
-    const desktop = useMediaQuery("(min-width: 1024px)");
+    const { desktop } = useDevice();
     return (
         <>
             <header className="relative pt-[26px]">

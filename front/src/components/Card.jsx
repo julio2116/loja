@@ -12,7 +12,7 @@ const Card = ({ img, details, inline }) => {
                         : "lg:min-w-[30.33%] lg:mx-[1.5%] 2xl:min-w-[22%]"
                 }`}
             >
-                <div>
+                <div className="w-[100%]">
                     <img className="w-[100%]" src={img} alt="" />
                 </div>
                 {(details || !desktop) && (

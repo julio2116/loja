@@ -1,5 +1,5 @@
 const { DataTypes } = require('sequelize');
-const sequelize = require('../connection');
+const sequelize = require('../../connection');
 
 const Products = sequelize.define(
   'Products',
@@ -14,7 +14,7 @@ const Products = sequelize.define(
     },
     imagem: {
         type: DataTypes.STRING
-    }
+    },
   },
 );
 

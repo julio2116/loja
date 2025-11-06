@@ -1,7 +1,7 @@
 {
   "name": "loja",
   "short_name": "loja",
-  "start_url": "/",
+  "start_url": "https://loja-j3r1.vercel.app/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#000000",
